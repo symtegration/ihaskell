@@ -10,6 +10,9 @@ For example, the integral from the following will be rendered as a mathematical 
 
 ![Example of integral rendered by IHaskell](docs/integration-example.png)
 
+[![Build](https://github.com/symtegration/ihaskell/actions/workflows/build.yaml/badge.svg)](https://github.com/symtegration/ihaskell/actions/workflows/build.yaml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/symtegration/ihaskell/badge)](https://scorecard.dev/viewer/?uri=github.com/symtegration/ihaskell)
+
 ## Installation
 
 To use with a local IHaskell installation, include extra dependencies in `stack.yaml`.
