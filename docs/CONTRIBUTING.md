@@ -27,21 +27,8 @@ All external contributions require review.
 
 ### Coding standards
 
-Code should be pure to the extent possible, and partial functions should be avoided.
 User-visible entities should be documented with [Haddock], including examples if feasible.
 [HLint] should report no issues, and formatting should be according to [Ormolu].
-
-All changes should be accompanied by corresponding tests.
-Code should be tested with property-based tests to the extent possible.
-This project uses [Hspec] and [QuickCheck] for testing.
-Examples in the Haddock documentation are tested using [`doctest-parallel`].
-
-[Haddock]: https://haskell-haddock.readthedocs.io/
-[HLint]: https://github.com/ndmitchell/hlint
-[Ormolu]: https://github.com/tweag/ormolu
-[Hspec]: https://hspec.github.io/
-[QuickCheck]: https://hackage.haskell.org/package/QuickCheck
-[`doctest-parallel`]: https://github.com/martijnbastiaan/doctest-parallel
 
 All warnings are enabled for builds.
 If a certain warning is unavoidable, it should only be disabled on a per file basis.
@@ -54,14 +41,6 @@ $ stack build --pedantic
 $ stack test --pedantic
 ```
 
-### Dependencies
-
-This project aims to avoid using too many heavy dependencies.
-Care should be taken not to add dependencies casually.
-If the same thing can be done with some additional code in the project,
-then adding a dependency should be avoided.
-This is more important the more heavy a dependency is or the less maintained it is.
-
 ### Releases
 
 When releasing, these files should be updated:
@@ -69,7 +48,7 @@ When releasing, these files should be updated:
 *   [`CHANGELOG.md`] with user-visible changes.
 
 *   [`package.yaml`] with the new version.  There should be at least one
-    subsequent `stack build` to update [`symtegration.cabal`] as well.
+    subsequent `stack build` to update [`ihaskell-symtegration.cabal`] as well.
 
 Versioning is based on [semantic versioning] and the [Haskell package versioning policy].
 When there are differences between the two policies, the latter takes precedence.
@@ -82,6 +61,6 @@ be submitted to the repository.
 
 [`CHANGELOG.md`]: ../CHANGELOG.md
 [`package.yaml`]: ../package.yaml
-[`symtegration.cabal`]: ../symtegration.cabal
+[`ihaskell-symtegration.cabal`]: ../ihaskell-symtegration.cabal
 [semantic versioning]: https://semver.org/
 [Haskell package versioning policy]: https://pvp.haskell.org/

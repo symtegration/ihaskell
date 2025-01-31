@@ -10,6 +10,25 @@ For example, the integral from the following will be rendered as a mathematical 
 
 ![Example of integral rendered by IHaskell](docs/integration-example.png)
 
+## Installation
+
+To use with a local IHaskell installation, include extra dependencies in `stack.yaml`.
+For example,
+
+```yaml
+extra-deps:
+- symtegration-0.6.1
+- git: https://github.com/symtegration/ihaskell
+  commit: '47f248b026104179902de87d55f938e033c7888d'
+```
+
+Once the extra dependencies are built and installed,
+they should be available for use within IHaskell.
+
+```bash
+$ stack install symtegration ihaskell-symtegration
+```
+
 ## Changes
 
 See [`CHANGELOG.md`] for what has changed.
