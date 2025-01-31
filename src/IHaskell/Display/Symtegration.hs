@@ -31,5 +31,5 @@ instance IHaskellDisplay Expression where
 
 -- | Typesets an 'Expression' even if it is a 'Maybe' value.
 instance IHaskellDisplay (Maybe Expression) where
-  display Nothing = pure $ Display [latex $ "\\[\\bot\\]"]
+  display Nothing = pure $ Display [latex "\\[\\bot\\]"]
   display (Just e) = display e
