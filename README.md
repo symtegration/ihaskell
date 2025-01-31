@@ -21,8 +21,8 @@ For example,
 ```yaml
 extra-deps:
 - symtegration-0.6.1
-- git: https://github.com/symtegration/ihaskell
-  commit: '47421555ffb9b205200b18fb768bddf538f02e13'
+- git: https://github.com/symtegration/ihaskell.git
+  commit: '3e05014ae8891a92c7a63d467160dc652d186991'
 ```
 
 Once the extra dependencies are built and installed,
