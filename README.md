@@ -19,7 +19,7 @@ For example,
 extra-deps:
 - symtegration-0.6.1
 - git: https://github.com/symtegration/ihaskell
-  commit: '47f248b026104179902de87d55f938e033c7888d'
+  commit: '47421555ffb9b205200b18fb768bddf538f02e13'
 ```
 
 Once the extra dependencies are built and installed,
