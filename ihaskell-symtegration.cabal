@@ -18,6 +18,8 @@ copyright:      Copyright 2025 Yoo Chung
 license:        Apache-2.0
 license-file:   LICENSE
 build-type:     Simple
+tested-with:
+    GHC == 9.8.4 || == 9.6.6 || == 9.6.4
 extra-source-files:
     LICENSE
     README.md
@@ -40,7 +42,6 @@ library
   hs-source-dirs:
       src
   default-extensions:
-      LambdaCase
       OverloadedStrings
   ghc-options: -Wall
   build-depends:

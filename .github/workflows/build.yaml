@@ -31,10 +31,6 @@ jobs:
           - "9.6.6"
           - "9.8.4"
 
-        include:
-          - ghc: "9.6.4"
-            flag: "--allow-newer"
-
       fail-fast: false
 
     name: cabal / ${{ matrix.os }} / ghc ${{ matrix.ghc }}
