@@ -28,9 +28,12 @@ jobs:
         # * Test current version used by https://github.com/IHaskell/IHaskell.
         ghc:
           - "9.6.4"
+          - "9.6.6"
           - "9.8.4"
-          - "9.10.1"
-          - "9.12.1"
+
+        include:
+          - ghc: "9.6.4"
+            flag: "--allow-newer"
 
       fail-fast: false
 
@@ -38,6 +41,11 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: Install packages
+        run: |
+          sudo apt update
+          sudo apt install libmagic-dev libgmp-dev libblas-dev liblapack-dev libcairo2-dev libpango1.0-dev libzmq3-dev
+
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
@@ -47,7 +55,7 @@ jobs:
           path: |
             ~/.cabal
             ~/.ghcup
-          key: cabal-${{ matrix.os }}-${{ matrix.ghc }}-${{ hashFiles('symtegration.cabal') }}
+          key: cabal-${{ matrix.os }}-${{ matrix.ghc }}-${{ hashFiles('ihaskell-symtegration.cabal') }}
           restore-keys: cabal-${{ matrix.os }}-${{ matrix.ghc }}-
 
       - name: Setup Haskell
@@ -65,6 +73,11 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
+      - name: Install packages
+        run: |
+          sudo apt update
+          sudo apt install libmagic-dev libgmp-dev libblas-dev liblapack-dev libcairo2-dev libpango1.0-dev libzmq3-dev
+
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
