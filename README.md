@@ -6,6 +6,10 @@ IHaskell extension for making the use of [Symtegration] more seamless with [IHas
 
 [IHaskell]: https://github.com/IHaskell/IHaskell
 
+For example, the integral from the following will be rendered as a mathematical expression.
+
+![Example of integral rendered by IHaskell](docs/integration-example.png)
+
 ## Changes
 
 See [`CHANGELOG.md`] for what has changed.
