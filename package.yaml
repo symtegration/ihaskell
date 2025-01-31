@@ -1,0 +1,41 @@
+name:                ihaskell-symtegration
+version:             0.1.0
+homepage:            https://symtegration.dev/
+github:              "symtegration/ihaskell"
+author:              "Yoo Chung"
+maintainer:          "dev@chungyc.org"
+copyright:           Copyright 2025 Yoo Chung
+license:             Apache-2.0
+
+extra-source-files:
+- LICENSE
+- README.md
+
+extra-doc-files:
+- CHANGELOG.md
+- docs/**
+
+synopsis:            IHaskell extension for making the use of Symtegration more seamless.
+category:            Development, Symbolic Computation
+
+description: |
+  IHaskell extension for making the use of Symtegration more seamless.
+  See the [README](https://github.com/symtegration/ihaskell) on GitHub for more information.
+
+language: GHC2021
+
+default-extensions:
+- LambdaCase
+- OverloadedStrings
+
+ghc-options:
+- -Wall
+
+dependencies:
+- base >= 4.9 && < 4.22
+- ihaskell >= 0.10 && < 0.13
+- symtegration >= 0.6 && < 0.7
+- text >= 1.0 && < 2.2
+
+library:
+  source-dirs: src
