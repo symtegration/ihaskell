@@ -14,7 +14,8 @@ spec = parallel $ do
         display (exp 2 :: Expression)
           `shouldReturn` Display
             [ latex "\\[e^{2}\\]",
-              markdown "```haskell\nexp 2\n```\n"
+              markdown "```haskell\nexp 2\n```\n",
+              plain "exp 2"
             ]
 
     describe "Maybe Expression" $ do
@@ -22,9 +23,14 @@ spec = parallel $ do
         display (Just (exp 2 :: Expression))
           `shouldReturn` Display
             [ latex "\\[e^{2}\\]",
-              markdown "```haskell\nexp 2\n```\n"
+              markdown "```haskell\nexp 2\n```\n",
+              plain "exp 2"
             ]
 
       it "Nothing" $
         display (Nothing :: Maybe Expression)
-          `shouldReturn` Display [latex "\\[\\bot\\]"]
+          `shouldReturn` Display
+            [ latex "\\[\\bot\\]",
+              markdown "```haskell\nNothing\n```\n",
+              plain "Nothing"
+            ]
