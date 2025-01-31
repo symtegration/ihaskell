@@ -32,13 +32,7 @@ instance IHaskellDisplay Expression where
 -- | Typesets an 'Expression' even if it is a 'Maybe' value.
 instance IHaskellDisplay (Maybe Expression) where
   display (Just e) = display e
-  display Nothing =
-    pure $
-      Display
-        [ latex "\\[\\bot\\]",
-          markdown "```haskell\nNothing\n```\n",
-          plain "Nothing"
-        ]
+  display Nothing = pure $ Display [latex "\\[\\bot\\]", plain "Nothing"]
 
 -- | Returns display data for the expression as LaTeX.
 latexDisplayData :: Expression -> [DisplayData]
@@ -46,9 +40,4 @@ latexDisplayData expr = [latex $ "\\[" <> unpack (toLaTeX expr) <> "\\]"]
 
 -- | Returns display data for the expression as Haskell code.
 haskellDisplayData :: Expression -> [DisplayData]
-haskellDisplayData expr =
-  [ markdown $ "```haskell\n" <> haskellString <> "\n```\n",
-    plain haskellString
-  ]
-  where
-    haskellString = unpack $ toHaskell expr
+haskellDisplayData expr = [plain $ unpack $ toHaskell expr]
