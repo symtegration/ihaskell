@@ -27,7 +27,12 @@ import Symtegration
 
 -- | Typesets 'Expression' values as mathematical expressions.
 instance IHaskellDisplay Expression where
-  display e = return $ Display [latex $ "\\[" <> unpack (toLaTeX e) <> "\\]"]
+  display e =
+    return $
+      Display
+        [ latex $ "\\[" <> unpack (toLaTeX e) <> "\\]",
+          markdown $ "```haskell\n" <> unpack (toHaskell e) <> "\n```\n"
+        ]
 
 -- | Typesets an 'Expression' even if it is a 'Maybe' value.
 instance IHaskellDisplay (Maybe Expression) where
