@@ -34,9 +34,19 @@ ghc-options:
 
 dependencies:
 - base >= 4.9 && < 4.22
-- ihaskell >= 0.10 && < 0.13
+- ihaskell >= 0.11 && < 0.13
 - symtegration >= 0.6 && < 0.7
-- text >= 1.0 && < 2.2
+- text >= 1 && < 3
 
 library:
   source-dirs: src
+
+tests:
+  spec:
+    source-dirs:  test
+    main:         Spec.hs
+    dependencies:
+    - ihaskell-symtegration
+    - hspec >= 2 && < 3
+    build-tools:
+    - hspec-discover >= 2 && < 3

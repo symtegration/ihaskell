@@ -5,6 +5,13 @@
 
 packages:
 - completed:
+    hackage: ihaskell-0.12.0.0@sha256:a808a207db6a23c408417f43a7b5de4c5388bae76f85ab4d866617efb48c9d0d,6679
+    pantry-tree:
+      sha256: 4cc094664c06ab8298dff6cc9a103f6b4d7411cb8dfb662a8b9f64554988a886
+      size: 2835
+  original:
+    hackage: ihaskell-0.12.0.0
+- completed:
     hackage: symtegration-0.6.1@sha256:81ef5c895935f20f08e939a7f0d08ee86dff599793d1026eb1e79f8872348bac,4918
     pantry-tree:
       sha256: 184b919982a40436ec9ecee2c5bd7321fbfeb04d5502be436b6e20843c61de0a

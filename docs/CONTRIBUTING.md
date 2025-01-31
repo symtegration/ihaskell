@@ -30,6 +30,15 @@ All external contributions require review.
 User-visible entities should be documented with [Haddock], including examples if feasible.
 [HLint] should report no issues, and formatting should be according to [Ormolu].
 
+[Haddock]: https://haskell-haddock.readthedocs.io/
+[HLint]: https://github.com/ndmitchell/hlint
+[Ormolu]: https://github.com/tweag/ormolu
+
+All changes should be accompanied by corresponding tests.
+This project uses [Hspec] for testing.
+
+[Hspec]: https://hspec.github.io/
+
 All warnings are enabled for builds.
 If a certain warning is unavoidable, it should only be disabled on a per file basis.
 While the warnings are not errors by default, code with compiler warnings will not

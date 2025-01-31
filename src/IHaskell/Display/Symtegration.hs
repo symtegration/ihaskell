@@ -19,7 +19,7 @@
 --
 -- If an integral cannot be derived, i.e., 'integrate' returns 'Nothing',
 -- then the bottom symbol \(\bot\) will be displayed.
-module IHaskell.Display.Symtegration where
+module IHaskell.Display.Symtegration () where
 
 import Data.Text (unpack)
 import IHaskell.Display

@@ -9,4 +9,5 @@ packages:
 - .
 
 extra-deps:
+- ihaskell-0.12.0.0
 - symtegration-0.6.1
