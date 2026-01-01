@@ -43,10 +43,10 @@ jobs:
           sudo apt install libmagic-dev libgmp-dev libblas-dev liblapack-dev libcairo2-dev libpango1.0-dev libzmq3-dev
 
       - name: Checkout
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: Cache dependencies
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: |
             ~/.cabal
@@ -55,7 +55,7 @@ jobs:
           restore-keys: cabal-${{ matrix.os }}-${{ matrix.ghc }}-
 
       - name: Setup Haskell
-        uses: haskell-actions/setup@82e8b5066385702e477d9dc98f287070493e8abd # v2.8.2
+        uses: haskell-actions/setup@0512451d82f3ca8c147db62e30464e7c4ca63d30 # v2.9.1
         with:
           ghc-version: ${{ matrix.ghc }}
 
@@ -79,10 +79,10 @@ jobs:
           sudo apt install libmagic-dev libgmp-dev libblas-dev liblapack-dev libcairo2-dev libpango1.0-dev libzmq3-dev
 
       - name: Checkout
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: Cache dependencies
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: |
             ~/.ghcup
@@ -91,7 +91,7 @@ jobs:
           restore-keys: stack-
 
       - name: Setup Haskell
-        uses: haskell-actions/setup@82e8b5066385702e477d9dc98f287070493e8abd # v2.8.2
+        uses: haskell-actions/setup@0512451d82f3ca8c147db62e30464e7c4ca63d30 # v2.9.1
         with:
           enable-stack: true
 
